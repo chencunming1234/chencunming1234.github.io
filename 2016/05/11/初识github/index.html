@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>初识github | 一叶障目</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="进入github官网github.com创建github账号
+1.添加repositories
+2.设置ssh-keygen;  命令：vim ~/.ssh/id_rsa.pub
+把得到的ssh-key复制出来  :q(退出复制界面)代码规范如下图
+
+添加到github的对应位置
+3.git clone+ssh地址，就可以把我们的repositories下载到本地  git status 查看当前">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初识github">
+<meta property="og:url" content="http://yoursite.com/2016/05/11/初识github/index.html">
+<meta property="og:site_name" content="一叶障目">
+<meta property="og:description" content="进入github官网github.com创建github账号
+1.添加repositories
+2.设置ssh-keygen;  命令：vim ~/.ssh/id_rsa.pub
+把得到的ssh-key复制出来  :q(退出复制界面)代码规范如下图
+
+添加到github的对应位置
+3.git clone+ssh地址，就可以把我们的repositories下载到本地  git status 查看当前">
+<meta property="og:image" content="http://yoursite.com/../images/sshkey.png">
+<meta property="og:updated_time" content="2016-05-11T13:43:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初识github">
+<meta name="twitter:description" content="进入github官网github.com创建github账号
+1.添加repositories
+2.设置ssh-keygen;  命令：vim ~/.ssh/id_rsa.pub
+把得到的ssh-key复制出来  :q(退出复制界面)代码规范如下图
+
+添加到github的对应位置
+3.git clone+ssh地址，就可以把我们的repositories下载到本地  git status 查看当前">
+<meta name="twitter:image" content="http://yoursite.com/../images/sshkey.png">
+  
+    <link rel="alternate" href="/atom.xml" title="一叶障目" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">一叶障目</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-初识github" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/11/初识github/" class="article-date">
+  <time datetime="2016-05-11T13:13:06.000Z" itemprop="datePublished">2016-05-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      初识github
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>进入github官网<a href="github.com/">github.com</a><br>创建github账号</p>
+<p>1.添加repositories</p>
+<p>2.设置ssh-keygen;<br>  命令：vim ~/.ssh/id_rsa.pub</p>
+<p>把得到的ssh-key复制出来<br>  :q(退出复制界面)代码规范如下图</p>
+<p><img src="../images/sshkey.png"></p>
+<p>添加到github的对应位置</p>
+<p>3.git clone+ssh地址，就可以把我们的repositories下载到本地<br>  git status 查看当前的仓库的状态</p>
+<p>4.修改更新：git config –global user.name “Your Name”<br>        git config –global user.email “email@example.com”<br>（首次上传时需要配置本地信息）<br>5.上传到暂存区<br>    git add .<br>    git commit -m “日志”<br>6.上传到github:<br>    git remote add origin git@github.com:yourname/learngit.git<br>    git push -u origin master</p>
+<p>##为github绑定一个hexo博客</p>
+<p>1.安装hexo<br>    hexo install -g<br>2.初始化hexo<br>    hero init<br>3.添加第三方模块<br>    npm install hexo-deployer-git –save<br>4.把github创建的repositories的<a href="http://地址写入到_config.yml文件尾部的deploy中；" target="_blank" rel="external">http://地址写入到_config.yml文件尾部的deploy中；</a><br>    deploy:git;<br>    repo:<a href="https://github.com/chencunming1234/chencunming1234.github.io.git（your" target="_blank" rel="external">https://github.com/chencunming1234/chencunming1234.github.io.git（your</a> adress）<br>5.返回终端运行<br>    hexo g<br>    hexo d</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="cio2wyneg00005gpl9tywawt0" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/11/初识npm/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">初识npm</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/11/初识github/">初识github</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/11/初识npm/">初识npm</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/11/初识node-js/">初识node.js</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/11/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 c.c.m<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

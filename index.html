@@ -51,9 +51,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -63,6 +63,97 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-初识github" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/11/初识github/" class="article-date">
+  <time datetime="2016-05-11T13:13:06.000Z" itemprop="datePublished">2016-05-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/11/初识github/">初识github</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>进入github官网<a href="github.com/">github.com</a><br>创建github账号</p>
+<p>1.添加repositories</p>
+<p>2.设置ssh-keygen;<br>  命令：vim ~/.ssh/id_rsa.pub</p>
+<p>把得到的ssh-key复制出来<br>  :q(退出复制界面)代码规范如下图</p>
+<p><img src="../images/sshkey.png"></p>
+<p>添加到github的对应位置</p>
+<p>3.git clone+ssh地址，就可以把我们的repositories下载到本地<br>  git status 查看当前的仓库的状态</p>
+<p>4.修改更新：git config –global user.name “Your Name”<br>        git config –global user.email “email@example.com”<br>（首次上传时需要配置本地信息）<br>5.上传到暂存区<br>    git add .<br>    git commit -m “日志”<br>6.上传到github:<br>    git remote add origin git@github.com:yourname/learngit.git<br>    git push -u origin master</p>
+<p>##为github绑定一个hexo博客</p>
+<p>1.安装hexo<br>    hexo install -g<br>2.初始化hexo<br>    hero init<br>3.添加第三方模块<br>    npm install hexo-deployer-git –save<br>4.把github创建的repositories的<a href="http://地址写入到_config.yml文件尾部的deploy中；" target="_blank" rel="external">http://地址写入到_config.yml文件尾部的deploy中；</a><br>    deploy:git;<br>    repo:<a href="https://github.com/chencunming1234/chencunming1234.github.io.git（your" target="_blank" rel="external">https://github.com/chencunming1234/chencunming1234.github.io.git（your</a> adress）<br>5.返回终端运行<br>    hexo g<br>    hexo d</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="cio2wyneg00005gpl9tywawt0" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-初识npm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/11/初识npm/" class="article-date">
+  <time datetime="2016-05-11T13:10:21.000Z" itemprop="datePublished">2016-05-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/11/初识npm/">初识npm</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="npm的安装"><a href="#npm的安装" class="headerlink" title="npm的安装"></a>npm的安装</h2><h3 id="npm-install-g"><a href="#npm-install-g" class="headerlink" title="npm install -g;"></a>npm install -g;</h3><p>-g表示全局安装</p>
+
+<p>npm adduser 创建账号</p>
+<p>第三方模块：</p>
+<p>npm install+模块名称（下载第三方模块到本地）</p>
+<p>自定义模块发行到npm</p>
+<p>npm init （初始化）<br>（含有：package.son;index.js;README.md）<br>npm publish （发行上传）</p>
+<p>npm unpublish+模块名称@版本号（删除发行）</p>
+<p>sudo npm -g hexo  （全局下下载安装hero）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/11/初识npm/" data-id="cio2wynf000035gplns2zypiw" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-初识node-js" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -86,11 +177,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="下载安装node-js"><a href="#下载安装node-js" class="headerlink" title="下载安装node.js;"></a>下载安装node.js;</h2><h3 id="进入官网：https-nodejs-org-en"><a href="#进入官网：https-nodejs-org-en" class="headerlink" title="进入官网：https://nodejs.org/en/"></a>进入官网：<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></h3>
+        <h2 id="下载安装node-js"><a href="#下载安装node-js" class="headerlink" title="下载安装node.js;"></a>下载安装node.js;</h2><h3 id="进入官网：https-nodejs-org-en"><a href="#进入官网：https-nodejs-org-en" class="headerlink" title="进入官网：https://nodejs.org/en/"></a>进入官网：<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></h3><h4 id="做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！"><a href="#做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！" class="headerlink" title="做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！"></a>做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！</h4><h2 id="js与node-js的一些区别"><a href="#js与node-js的一些区别" class="headerlink" title="js与node.js的一些区别"></a>js与node.js的一些区别</h2><p><br>1、b/s系统；<br>浏览器/服务端<br><br>chrome浏览器//两个内核 webkit v8<br><br>webkit:页面布局，解析样式<br>v8:JS解析器<br>硬件层：<br><br>node.js的底层基于c<br><br>libuv &gt; libev &gt;连接c/c++ &gt; 硬件层<br><br>客户端JS（ECMA/DOM/BOM）<br>核心为ECMA<br>DOM/BOM是浏览器自己封装的<br><br>在node.js里面只有ECMA，没有BOM DOM window<br><br>znode.js的API:process os file buffer util queryting<br>node.js特色：没有兼容性问题;可运行ecma6;<br></p><br>### node.js的速度远比js快的多<br><br>##node.js的安装<br><br><p>到官网下载好安装包以后直接点击运行一直到安装结束</p><br><p>在终端里可检查是否有安装好；下面以mac系统为例</p><br><p><br>    node -v；出现node.js的版本号就说明已经安装完成<br></p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio2v9tay00011bplqplnyvay" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio2wynex00025gplgs4npdkp" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -135,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="cio2v9tat00001bplnm3lni2t" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="cio2wyneu00015gplpbukoi2d" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -170,9 +261,17 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/05/11/初识github/">初识github</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/11/初识npm/">初识npm</a>
+          </li>
         
           <li>
             <a href="/2016/05/11/初识node-js/">初识node.js</a>
@@ -195,7 +294,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 c.c.m<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
