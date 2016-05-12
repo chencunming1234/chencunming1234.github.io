@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/11/初识node-js/index.html">
 <meta property="og:site_name" content="一叶障目">
 <meta property="og:description" content="下载安装node.js;进入官网：https://nodejs.org/en/做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！js与node.js的一些区别1、b/s系统；浏览器/服务端chrome浏览器//两个内核 webkit v8webkit:页面布局，解析样式v8:JS解析器硬件层：node.js的底层基于clibuv &amp;gt; libev &amp;gt;连接c/c++ &amp;gt; 硬">
-<meta property="og:updated_time" content="2016-05-11T13:05:57.000Z">
+<meta property="og:updated_time" content="2016-05-12T01:31:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初识node.js">
 <meta name="twitter:description" content="下载安装node.js;进入官网：https://nodejs.org/en/做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！js与node.js的一些区别1、b/s系统；浏览器/服务端chrome浏览器//两个内核 webkit v8webkit:页面布局，解析样式v8:JS解析器硬件层：node.js的底层基于clibuv &amp;gt; libev &amp;gt;连接c/c++ &amp;gt; 硬">
@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -86,10 +86,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="下载安装node-js"><a href="#下载安装node-js" class="headerlink" title="下载安装node.js;"></a>下载安装node.js;</h2><h3 id="进入官网：https-nodejs-org-en"><a href="#进入官网：https-nodejs-org-en" class="headerlink" title="进入官网：https://nodejs.org/en/"></a>进入官网：<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></h3><h4 id="做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！"><a href="#做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！" class="headerlink" title="做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！"></a>做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！</h4><h2 id="js与node-js的一些区别"><a href="#js与node-js的一些区别" class="headerlink" title="js与node.js的一些区别"></a>js与node.js的一些区别</h2><p><br>1、b/s系统；<br>浏览器/服务端<br><br>chrome浏览器//两个内核 webkit v8<br><br>webkit:页面布局，解析样式<br>v8:JS解析器<br>硬件层：<br><br>node.js的底层基于c<br><br>libuv &gt; libev &gt;连接c/c++ &gt; 硬件层<br><br>客户端JS（ECMA/DOM/BOM）<br>核心为ECMA<br>DOM/BOM是浏览器自己封装的<br><br>在node.js里面只有ECMA，没有BOM DOM window<br><br>znode.js的API:process os file buffer util queryting<br>node.js特色：没有兼容性问题;可运行ecma6;<br></p><br>### node.js的速度远比js快的多<br><br>##node.js的安装<br><br><p>到官网下载好安装包以后直接点击运行一直到安装结束</p><br><p>在终端里可检查是否有安装好；下面以mac系统为例</p><br><p><br>    node -v；出现node.js的版本号就说明已经安装完成<br></p>
+
+<p>##nodejs的一些基本操作：<br><strong>dirname:目录路径
+</strong>filename:文件路径<br>原生模块：<br>直接可引入：var os=require(‘os’);<br>          var querystring=require(‘querystring’)<br>          var fs=require(‘fs’)<br>          var util=require(‘util’)<br>          var path=require(‘path’)<br>          var vm=require(‘vm’)</p>
+<p>获得第三方模块：npm install moduleName;<br>引入第三方模块：var moduleIn=require(moduleName)</p>
+<p>输出自定义js模块：moudble.exports=name;<br>引入第三方模块：var moduleIn=require(__dirname+”/youname.js”)</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio2wynex00025gplgs4npdkp" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio3me76z0000h6pl5xnib666" class="article-share-link">Share</a>
       
       
     </footer>
@@ -99,7 +105,7 @@
 <nav id="article-nav">
   
     <a href="/2016/05/11/初识npm/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
           初识npm
@@ -109,7 +115,7 @@
   
   
     <a href="/2016/05/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Hello World</div>
     </a>
   
@@ -142,7 +148,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -175,7 +181,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 c.c.m<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
