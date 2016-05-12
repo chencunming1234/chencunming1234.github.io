@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/11/初识node-js/index.html">
 <meta property="og:site_name" content="一叶障目">
 <meta property="og:description" content="下载安装node.js;进入官网：https://nodejs.org/en/做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！js与node.js的一些区别1、b/s系统；浏览器/服务端chrome浏览器//两个内核 webkit v8webkit:页面布局，解析样式v8:JS解析器硬件层：node.js的底层基于clibuv &amp;gt; libev &amp;gt;连接c/c++ &amp;gt; 硬">
-<meta property="og:updated_time" content="2016-05-12T01:31:47.000Z">
+<meta property="og:updated_time" content="2016-05-12T01:36:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初识node.js">
 <meta name="twitter:description" content="下载安装node.js;进入官网：https://nodejs.org/en/做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！js与node.js的一些区别1、b/s系统；浏览器/服务端chrome浏览器//两个内核 webkit v8webkit:页面布局，解析样式v8:JS解析器硬件层：node.js的底层基于clibuv &amp;gt; libev &amp;gt;连接c/c++ &amp;gt; 硬">
@@ -88,14 +88,14 @@
         <h2 id="下载安装node-js"><a href="#下载安装node-js" class="headerlink" title="下载安装node.js;"></a>下载安装node.js;</h2><h3 id="进入官网：https-nodejs-org-en"><a href="#进入官网：https-nodejs-org-en" class="headerlink" title="进入官网：https://nodejs.org/en/"></a>进入官网：<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></h3><h4 id="做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！"><a href="#做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！" class="headerlink" title="做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！"></a>做开发的时候最好还是用LTS稳定版的，平时学习的时候可随意！</h4><h2 id="js与node-js的一些区别"><a href="#js与node-js的一些区别" class="headerlink" title="js与node.js的一些区别"></a>js与node.js的一些区别</h2><p><br>1、b/s系统；<br>浏览器/服务端<br><br>chrome浏览器//两个内核 webkit v8<br><br>webkit:页面布局，解析样式<br>v8:JS解析器<br>硬件层：<br><br>node.js的底层基于c<br><br>libuv &gt; libev &gt;连接c/c++ &gt; 硬件层<br><br>客户端JS（ECMA/DOM/BOM）<br>核心为ECMA<br>DOM/BOM是浏览器自己封装的<br><br>在node.js里面只有ECMA，没有BOM DOM window<br><br>znode.js的API:process os file buffer util queryting<br>node.js特色：没有兼容性问题;可运行ecma6;<br></p><br>### node.js的速度远比js快的多<br><br>##node.js的安装<br><br><p>到官网下载好安装包以后直接点击运行一直到安装结束</p><br><p>在终端里可检查是否有安装好；下面以mac系统为例</p><br><p><br>    node -v；出现node.js的版本号就说明已经安装完成<br></p>
 
 <p>##nodejs的一些基本操作：<br><strong>dirname:目录路径
-</strong>filename:文件路径<br>原生模块：<br>直接可引入：var os=require(‘os’);<br>          var querystring=require(‘querystring’)<br>          var fs=require(‘fs’)<br>          var util=require(‘util’)<br>          var path=require(‘path’)<br>          var vm=require(‘vm’)</p>
+</strong>filename:文件路径<br>原生模块：<br>直接可引入：var os=require(‘os’);<br>          var querystring=require(‘querystring’)<br>          var fs=require(‘fs’)<br>          var util=require(‘util’)<br>          var path=require(‘path’)<br>          var vm=require(‘vm’)<br>还有net,http,https等多种原生模块</p>
 <p>获得第三方模块：npm install moduleName;<br>引入第三方模块：var moduleIn=require(moduleName)</p>
 <p>输出自定义js模块：moudble.exports=name;<br>引入第三方模块：var moduleIn=require(__dirname+”/youname.js”)</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio3me76z0000h6pl5xnib666" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio3mrkrv0002izpld4z7yyps" class="article-share-link">Share</a>
       
       
     </footer>
