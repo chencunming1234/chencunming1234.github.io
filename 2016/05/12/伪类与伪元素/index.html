@@ -5,16 +5,22 @@
   
   <title>伪类与伪元素 | 一叶障目</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="新手之路">
+  <meta name="description" content="伪类伪类一般都带有一种状态；例如：a:link;a:visited;a:hover;a:active;他们分别表达了一种状态
+连接、访问、划过、激活；
+伪元素首先，伪元素是没有语义的，它不写在HTML里。下面列出一些常见的伪元素：::before;它表示在尾部追加一个标签，::after;它表示在标签或内容前面增加一个标签::first-line;它表示选中文本的第一行；::first-lette">
 <meta property="og:type" content="article">
 <meta property="og:title" content="伪类与伪元素">
 <meta property="og:url" content="http://yoursite.com/2016/05/12/伪类与伪元素/index.html">
 <meta property="og:site_name" content="一叶障目">
-<meta property="og:description" content="新手之路">
-<meta property="og:updated_time" content="2016-05-12T07:25:41.000Z">
+<meta property="og:description" content="伪类伪类一般都带有一种状态；例如：a:link;a:visited;a:hover;a:active;他们分别表达了一种状态
+连接、访问、划过、激活；
+伪元素首先，伪元素是没有语义的，它不写在HTML里。下面列出一些常见的伪元素：::before;它表示在尾部追加一个标签，::after;它表示在标签或内容前面增加一个标签::first-line;它表示选中文本的第一行；::first-lette">
+<meta property="og:updated_time" content="2016-05-12T08:14:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="伪类与伪元素">
-<meta name="twitter:description" content="新手之路">
+<meta name="twitter:description" content="伪类伪类一般都带有一种状态；例如：a:link;a:visited;a:hover;a:active;他们分别表达了一种状态
+连接、访问、划过、激活；
+伪元素首先，伪元素是没有语义的，它不写在HTML里。下面列出一些常见的伪元素：::before;它表示在尾部追加一个标签，::after;它表示在标签或内容前面增加一个标签::first-line;它表示选中文本的第一行；::first-lette">
   
     <link rel="alternate" href="/atom.xml" title="一叶障目" type="application/atom+xml">
   
@@ -85,11 +91,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><p>伪类一般都带有一种状态；例如：a:link;a:visited;a:hover;a:active;他们分别表达了一种状态</p>
+<p>连接、访问、划过、激活；</p>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><p>首先，伪元素是没有语义的，它不写在HTML里。下面列出一些常见的伪元素：<br>::before;它表示在尾部追加一个标签，<br>::after;它表示在标签或内容前面增加一个标签<br>::first-line;它表示选中文本的第一行；<br>::first-letter;它表示选中文本的首字符；<br>::selection;它表示鼠标选中的内容（只能更改两个属性值：background和color）</p>
+<p>对于before和after：它们出现在标签或文本的前面或者后面；在有标签时出面在标签前面或者后面，有广西<br>时出现在文本内容的开始和结束的位置！</p>
+<p>before和after可配合position使用，可以适合的时候在标签前面增加效果！<br>div1::before{<br>    content: “”;<br>    width: 50px;<br>    height: 50px;<br>    background: black;<br>    border-radius: 50%;<br>    display: block;position: absolute;<br>    left: -10px;top:-10x;<br>}<br>这样可以对象标签的适当位置增加一个效果</p>
+<p>.div1::after{<br>    contne:””;<br>    clear:both;<br>    display:block;<br>    height:0;<br>    zoom:1;<br>}<br>这们一段代码具有清除浮动的效果；display/height/zoom是为了兼容低版本的浏览器；</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="cio3z12v70000xkpl3ns8mvv3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="cio40r1v40001zeplpv3igk6g" class="article-share-link">Share</a>
       
       
     </footer>
