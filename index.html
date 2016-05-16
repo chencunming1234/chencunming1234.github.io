@@ -94,19 +94,20 @@
 <h3 id="3-作为项目的开发依赖（devDependencies）安装："><a href="#3-作为项目的开发依赖（devDependencies）安装：" class="headerlink" title="3. 作为项目的开发依赖（devDependencies）安装："></a>3. 作为项目的开发依赖（devDependencies）安装：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install --save-dev gulp</span><br></pre></td></tr></table></figure>
 <h3 id="4-安装合适的插件：以下推荐一些适合的插件："><a href="#4-安装合适的插件：以下推荐一些适合的插件：" class="headerlink" title="4.安装合适的插件：以下推荐一些适合的插件："></a>4.安装合适的插件：以下推荐一些适合的插件：</h3><pre><code>gulp-concat;gulp-jsmin;
 </code></pre><p>###使用npm命令进行安装；<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install gulp-concat --save-dev</span><br><span class="line">npm install gulp-jsmin --save-dev</span><br></pre></td></tr></table></figure></p>
-<p>###在命令后面添加–save-dev是为了在package.json文件里能的能看到插件版本，方便阅读；可以快速的知道使用了什么<br>插件；可以用直接复制package.json进行npm install 直接搭配环境！</p>
+<p>###在命令后面添加–save-dev是为了在package.json文件里能的能看到插件版本，方便阅读；可以快速的知道使用了什么<br>插件；可以用直接复制package.json进行npm install 直接搭配环境！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">"devDependencies"</span>: &#123;</span><br><span class="line">  <span class="string">"gulp"</span>: <span class="string">"^3.9.1"</span>,</span><br><span class="line">  <span class="string">"gulp-concat"</span>: <span class="string">"^2.6.0"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
 <p>gulp里的项目如下所示：</p>
 <p><img src="../images/gulp0.png"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">"devDependencies"</span>: &#123;</span><br><span class="line">  <span class="string">"gulp"</span>: <span class="string">"^3.9.1"</span>,</span><br><span class="line">  <span class="string">"gulp-concat"</span>: <span class="string">"^2.6.0"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 <h3 id="5-gulp的基本使用，下面以js文件的拼接-压缩为例；"><a href="#5-gulp的基本使用，下面以js文件的拼接-压缩为例；" class="headerlink" title="5.gulp的基本使用，下面以js文件的拼接-压缩为例；"></a>5.gulp的基本使用，下面以js文件的拼接-压缩为例；</h3><p>###在gulp的使用过程中要依赖于这么一个js文件—&gt;gulpfile.js</p>
 <p>所以我需要在gulp根目录下手动建立gulpfile.js;gulp插件在运行命令的时候会直接读取运行这个js文件</p>
 <p>例如，在gulp下的js文件夹里有三个js文件：a.js;b.js;c.js;</p>
 <p><img src="../images/gulp1.png"></p>
+<p>代码里的news.js和jss文件夹只要命名；系统会自己创建！</p>
+<p>最后运行命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">gulp ccm</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="cio9r0uxv0000s1pl6urxxph6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="cio9r5ls00001sxplj7brjqkq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,7 +143,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪元素的应用/" data-id="cio9r0uy50002s1plxdc6a77p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪元素的应用/" data-id="cio9r5ls70004sxpl30zr8amq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -184,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="cio9r0uy80003s1plvswmx08e" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="cio9r5ls30002sxplm3b7hmmd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -231,7 +232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="cio9r0uy90004s1pluzvp7yaa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="cio9r5ls90005sxpljryusdt8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -276,7 +277,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识npm/" data-id="cio9r0uyc0006s1plixnj4jie" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识npm/" data-id="cio9r5lsa0006sxple5ifayvh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -318,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio9r0uyb0005s1pltd1uk50j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio9r5ls60003sxplwy9b8og9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -363,7 +364,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="cio9r0uy10001s1plzrikyh7f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="cio9r5lrt0000sxplhjzr5srr" class="article-share-link">Share</a>
       
       
     </footer>
