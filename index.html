@@ -51,9 +51,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -103,11 +103,15 @@
 <p><img src="../images/gulp1.png"></p>
 <p>代码里的news.js和jss文件夹只要命名；系统会自己创建！</p>
 <p>最后运行命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">gulp ccm</span><br></pre></td></tr></table></figure></p>
+<h3 id="6-gulp的顺序执行"><a href="#6-gulp的顺序执行" class="headerlink" title="6.gulp的顺序执行"></a>6.gulp的顺序执行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var gulp=require&#123;<span class="string">'gulp'</span>&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'ccm'</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	console.log(<span class="string">'hello word'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">gulp.task(<span class="string">'default'</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	console.log(<span class="string">'hello ccm'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">gulp.task(<span class="string">'default'</span>,[<span class="string">'ccm'</span>],<span class="function"><span class="title">function</span></span>()&#123;&#125;)</span><br></pre></td></tr></table></figure>
+<p>运行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp</span><br></pre></td></tr></table></figure>
+<p>会先打印出hello word;再打印出hwllo ccm;这种语法下，default是最后执行的</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="cio9r5ls00001sxplj7brjqkq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="cio9rer890000tlpluaqeeztj" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -143,7 +147,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪元素的应用/" data-id="cio9r5ls70004sxpl30zr8amq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪元素的应用/" data-id="cio9rer8j0004tlpl274lykxz" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -185,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="cio9r5ls30002sxplm3b7hmmd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="cio9rer8g0002tlplgpmr29et" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -232,7 +236,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="cio9r5ls90005sxpljryusdt8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="cio9rer8i0003tlpli6jaszzs" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -277,7 +281,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识npm/" data-id="cio9r5lsa0006sxple5ifayvh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识npm/" data-id="cio9rer8u0006tlplpbx8wepc" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -319,7 +323,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio9r5ls60003sxplwy9b8og9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio9rer8k0005tlplo0wtqi3u" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -364,7 +368,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="cio9r5lrt0000sxplhjzr5srr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="cio9rer8e0001tlpl2lf8rg3p" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -399,7 +403,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -436,7 +440,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 c.c.m<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
