@@ -9,7 +9,8 @@
 使用npm命令进行安装
 1、安装npm:12sodu npm install -g gulp
 在mac系统下需要取得一定的权限才能进行全局安装；
-2. 作为项目的开发依赖（devDependencies）安装：12npm install --save-dev">
+2.初始化npm;12npm init
+3. 作为项目的开发依赖（devDependencies）安装：12npm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="团队配合之gulp">
 <meta property="og:url" content="http://yoursite.com/2016/05/16/gulp/index.html">
@@ -18,17 +19,20 @@
 使用npm命令进行安装
 1、安装npm:12sodu npm install -g gulp
 在mac系统下需要取得一定的权限才能进行全局安装；
-2. 作为项目的开发依赖（devDependencies）安装：12npm install --save-dev">
+2.初始化npm;12npm init
+3. 作为项目的开发依赖（devDependencies）安装：12npm">
+<meta property="og:image" content="http://yoursite.com/../images/gulp0.png">
 <meta property="og:image" content="http://yoursite.com/../images/gulp1.png">
-<meta property="og:updated_time" content="2016-05-16T08:21:04.000Z">
+<meta property="og:updated_time" content="2016-05-16T08:28:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="团队配合之gulp">
 <meta name="twitter:description" content="gulp的安装官网：http://www.gulpjs.com.cn/第三方插件查询：http://gulpjs.com/plugins/
 使用npm命令进行安装
 1、安装npm:12sodu npm install -g gulp
 在mac系统下需要取得一定的权限才能进行全局安装；
-2. 作为项目的开发依赖（devDependencies）安装：12npm install --save-dev">
-<meta name="twitter:image" content="http://yoursite.com/../images/gulp1.png">
+2.初始化npm;12npm init
+3. 作为项目的开发依赖（devDependencies）安装：12npm">
+<meta name="twitter:image" content="http://yoursite.com/../images/gulp0.png">
   
     <link rel="alternate" href="/atom.xml" title="一叶障目" type="application/atom+xml">
   
@@ -103,11 +107,15 @@
 <p>使用npm命令进行安装</p>
 <h3 id="1、安装npm"><a href="#1、安装npm" class="headerlink" title="1、安装npm:"></a>1、安装npm:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sodu npm install -g gulp</span><br></pre></td></tr></table></figure>
 <p>在mac系统下需要取得一定的权限才能进行全局安装；</p>
-<h3 id="2-作为项目的开发依赖（devDependencies）安装："><a href="#2-作为项目的开发依赖（devDependencies）安装：" class="headerlink" title="2. 作为项目的开发依赖（devDependencies）安装："></a>2. 作为项目的开发依赖（devDependencies）安装：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install --save-dev gulp</span><br></pre></td></tr></table></figure>
-<h3 id="3-安装合适的插件：以下推荐一些适合的插件："><a href="#3-安装合适的插件：以下推荐一些适合的插件：" class="headerlink" title="3.安装合适的插件：以下推荐一些适合的插件："></a>3.安装合适的插件：以下推荐一些适合的插件：</h3><pre><code>gulp-concat;gulp-jsmin;
+<h3 id="2-初始化npm"><a href="#2-初始化npm" class="headerlink" title="2.初始化npm;"></a>2.初始化npm;</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
+<h3 id="3-作为项目的开发依赖（devDependencies）安装："><a href="#3-作为项目的开发依赖（devDependencies）安装：" class="headerlink" title="3. 作为项目的开发依赖（devDependencies）安装："></a>3. 作为项目的开发依赖（devDependencies）安装：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install --save-dev gulp</span><br></pre></td></tr></table></figure>
+<h3 id="4-安装合适的插件：以下推荐一些适合的插件："><a href="#4-安装合适的插件：以下推荐一些适合的插件：" class="headerlink" title="4.安装合适的插件：以下推荐一些适合的插件："></a>4.安装合适的插件：以下推荐一些适合的插件：</h3><pre><code>gulp-concat;gulp-jsmin;
 </code></pre><p>###使用npm命令进行安装；<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install gulp-concat --save-dev</span><br><span class="line">npm install gulp-jsmin --save-dev</span><br></pre></td></tr></table></figure></p>
-<p>###在命令后面添加–save-dev是为了在package.json文件里能的能看到插件版本，方便阅读；可以快速的知道使用了什么<br>插件；可以用直接复制package.json进行npm install 直接搭配环境！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">"devDependencies"</span>: &#123;</span><br><span class="line">  <span class="string">"gulp"</span>: <span class="string">"^3.9.1"</span>,</span><br><span class="line">  <span class="string">"gulp-concat"</span>: <span class="string">"^2.6.0"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
-<h3 id="4-gulp的基本使用，下面以js文件的拼接-压缩为例；"><a href="#4-gulp的基本使用，下面以js文件的拼接-压缩为例；" class="headerlink" title="4.gulp的基本使用，下面以js文件的拼接-压缩为例；"></a>4.gulp的基本使用，下面以js文件的拼接-压缩为例；</h3><p>###在gulp的使用过程中要依赖于这么一个js文件—&gt;gulpfile.js</p>
+<p>###在命令后面添加–save-dev是为了在package.json文件里能的能看到插件版本，方便阅读；可以快速的知道使用了什么<br>插件；可以用直接复制package.json进行npm install 直接搭配环境！</p>
+<p>gulp里的项目如下所示：</p>
+<p><img src="../images/gulp0.png"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">"devDependencies"</span>: &#123;</span><br><span class="line">  <span class="string">"gulp"</span>: <span class="string">"^3.9.1"</span>,</span><br><span class="line">  <span class="string">"gulp-concat"</span>: <span class="string">"^2.6.0"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h3 id="5-gulp的基本使用，下面以js文件的拼接-压缩为例；"><a href="#5-gulp的基本使用，下面以js文件的拼接-压缩为例；" class="headerlink" title="5.gulp的基本使用，下面以js文件的拼接-压缩为例；"></a>5.gulp的基本使用，下面以js文件的拼接-压缩为例；</h3><p>###在gulp的使用过程中要依赖于这么一个js文件—&gt;gulpfile.js</p>
 <p>所以我需要在gulp根目录下手动建立gulpfile.js;gulp插件在运行命令的时候会直接读取运行这个js文件</p>
 <p>例如，在gulp下的js文件夹里有三个js文件：a.js;b.js;c.js;</p>
 <p><img src="../images/gulp1.png"></p>
@@ -115,7 +123,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="cio9qrcpz0000qsplmh6wqhvk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="cio9r0uxv0000s1pl6urxxph6" class="article-share-link">Share</a>
       
       
     </footer>
