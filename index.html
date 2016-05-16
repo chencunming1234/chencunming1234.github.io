@@ -51,9 +51,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -91,19 +91,23 @@
 <h3 id="1、安装npm"><a href="#1、安装npm" class="headerlink" title="1、安装npm:"></a>1、安装npm:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sodu npm install -g gulp</span><br></pre></td></tr></table></figure>
 <p>在mac系统下需要取得一定的权限才能进行全局安装；</p>
 <h3 id="2-初始化npm"><a href="#2-初始化npm" class="headerlink" title="2.初始化npm;"></a>2.初始化npm;</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
-<h3 id="3-作为项目的开发依赖（devDependencies）安装："><a href="#3-作为项目的开发依赖（devDependencies）安装：" class="headerlink" title="3. 作为项目的开发依赖（devDependencies）安装："></a>3. 作为项目的开发依赖（devDependencies）安装：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install --save-dev gulp</span><br></pre></td></tr></table></figure>
-<h3 id="4-安装合适的插件：以下推荐一些适合的插件："><a href="#4-安装合适的插件：以下推荐一些适合的插件：" class="headerlink" title="4.安装合适的插件：以下推荐一些适合的插件："></a>4.安装合适的插件：以下推荐一些适合的插件：</h3><pre><code>gulp-concat;gulp-jsmin;
+<h3 id="3-安装合适的插件：以下推荐一些适合的插件："><a href="#3-安装合适的插件：以下推荐一些适合的插件：" class="headerlink" title="3.安装合适的插件：以下推荐一些适合的插件："></a>3.安装合适的插件：以下推荐一些适合的插件：</h3><pre><code>gulp-concat
+gulp-cssmin
+gulp-htmlmin
+gulp-jade
+gulp-jsmin
+gulp-less
 </code></pre><p>###使用npm命令进行安装；<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">npm install gulp-concat --save-dev</span><br><span class="line">npm install gulp-jsmin --save-dev</span><br></pre></td></tr></table></figure></p>
 <p>###在命令后面添加–save-dev是为了在package.json文件里能的能看到插件版本，方便阅读；可以快速的知道使用了什么<br>插件；可以用直接复制package.json进行npm install 直接搭配环境！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">"devDependencies"</span>: &#123;</span><br><span class="line">  <span class="string">"gulp"</span>: <span class="string">"^3.9.1"</span>,</span><br><span class="line">  <span class="string">"gulp-concat"</span>: <span class="string">"^2.6.0"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
 <p>gulp里的项目如下所示：</p>
 <p><img src="../images/gulp0.png"></p>
-<h3 id="5-gulp的基本使用，下面以js文件的拼接-压缩为例；"><a href="#5-gulp的基本使用，下面以js文件的拼接-压缩为例；" class="headerlink" title="5.gulp的基本使用，下面以js文件的拼接-压缩为例；"></a>5.gulp的基本使用，下面以js文件的拼接-压缩为例；</h3><p>###在gulp的使用过程中要依赖于这么一个js文件—&gt;gulpfile.js</p>
+<h3 id="4-gulp的基本使用，下面以js文件的拼接-压缩为例；"><a href="#4-gulp的基本使用，下面以js文件的拼接-压缩为例；" class="headerlink" title="4.gulp的基本使用，下面以js文件的拼接-压缩为例；"></a>4.gulp的基本使用，下面以js文件的拼接-压缩为例；</h3><p>###在gulp的使用过程中要依赖于这么一个js文件—&gt;gulpfile.js</p>
 <p>所以我需要在gulp根目录下手动建立gulpfile.js;gulp插件在运行命令的时候会直接读取运行这个js文件</p>
 <p>例如，在gulp下的js文件夹里有三个js文件：a.js;b.js;c.js;</p>
 <p><img src="../images/gulp1.png"></p>
 <p>代码里的news.js和jss文件夹只要命名；系统会自己创建！</p>
 <p>最后运行命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">gulp ccm</span><br></pre></td></tr></table></figure></p>
-<h3 id="6-gulp的顺序执行"><a href="#6-gulp的顺序执行" class="headerlink" title="6.gulp的顺序执行"></a>6.gulp的顺序执行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var gulp=require&#123;<span class="string">'gulp'</span>&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'ccm'</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	console.log(<span class="string">'hello word'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">gulp.task(<span class="string">'default'</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	console.log(<span class="string">'hello ccm'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">gulp.task(<span class="string">'default'</span>,[<span class="string">'ccm'</span>],<span class="function"><span class="title">function</span></span>()&#123;&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="5-gulp的顺序执行"><a href="#5-gulp的顺序执行" class="headerlink" title="5.gulp的顺序执行"></a>5.gulp的顺序执行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var gulp=require&#123;<span class="string">'gulp'</span>&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'ccm'</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	console.log(<span class="string">'hello word'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">gulp.task(<span class="string">'default'</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	console.log(<span class="string">'hello ccm'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">gulp.task(<span class="string">'default'</span>,[<span class="string">'ccm'</span>],<span class="function"><span class="title">function</span></span>()&#123;&#125;)</span><br></pre></td></tr></table></figure>
 <p>运行命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp</span><br></pre></td></tr></table></figure>
 <p>会先打印出hello word;再打印出hwllo ccm;这种语法下，default是最后执行的</p>
@@ -111,7 +115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="cio9rer890000tlpluaqeeztj" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="cio9sy2p50000x4plbhvw0ji2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,7 +151,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪元素的应用/" data-id="cio9rer8j0004tlpl274lykxz" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪元素的应用/" data-id="cio9sy2ph0004x4pl25v98dsf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -189,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="cio9rer8g0002tlplgpmr29et" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="cio9sy2pj0006x4pl8ttemju4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -236,7 +240,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="cio9rer8i0003tlpli6jaszzs" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="cio9sy2pb0001x4plcogv8b88" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识npm/" data-id="cio9rer8u0006tlplpbx8wepc" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识npm/" data-id="cio9sy2pg0003x4pl847ld95n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -323,7 +327,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio9rer8k0005tlplo0wtqi3u" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio9sy2pi0005x4plaaw7v3rm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -368,7 +372,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="cio9rer8e0001tlpl2lf8rg3p" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="cio9sy2pd0002x4plvk27xbjn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -403,7 +407,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -440,7 +444,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 c.c.m<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
