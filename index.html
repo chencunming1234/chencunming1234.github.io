@@ -91,12 +91,14 @@
 <p>函数的解析过程:<a href="http://www.2cto.com/kf/201401/273825.html" target="_blank" rel="external">http://www.2cto.com/kf/201401/273825.html</a></p>
 <p>下面先公布了下答案：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1、Foo.getName();//2</span><br><span class="line">2、getName();//4</span><br><span class="line">3、Foo().getName();//1</span><br><span class="line">4、getName();//1</span><br><span class="line">5、new Foo.getName();//2</span><br><span class="line">6、new Foo().getName();//3</span><br><span class="line">7、new new Foo().getName();//3</span><br></pre></td></tr></table></figure>
-<p>1、这个题目只是执行了Foo上的自己的方法；<br>2、这个题目要注意两个地方；<br>（1）javascript在解析的时候会把变量名提取出来，不包含变量的值，等要用的时候再去查找相应的值<br>（2）javascript在解析的时候会把整个函数都提取出来，包含整个函数的内容，如果函数名与变量相同就保留函数名；<br>所以这个题目执行时候是这样的，<mark>var getName</mark>被提取出来，<mark>function getName() {<br>    alert (5);}</mark>整个内容都被提取出来；然后顺序执行，执行过程中把<mark>function () {<br>    alert (4);};</mark>重新赋值给getName;所以答案为4。</p>
+<p>1、这个题目只是执行了Foo上的自己的方法。<br>2、这个题目要注意两个地方:<br>（1）javascript在解析的时候会把变量名提取出来，不包含变量的值，等要用的时候再去查找相应的值<br>（2）javascript在解析的时候会把整个函数都提取出来，包含整个函数的内容，如果函数名与变量相同就保留函数名；<br>所以这个题目执行时候是这样的，<mark>var getName</mark>被提取出来，<mark>function getName() {<br>    alert (5);}</mark>整个内容都被提取出来；然后顺序执行，执行过程中把<mark>function () {<br>    alert (4);};</mark>重新赋值给getName;所以答案为4。<br>3、这个题目先执行了Foo函数，同时由于里面的getName不带var，是一个全局变量，改变了getName的内容；然后返回了this;这时候</p>
+<p>this指向的是window;相当于<mark>window.getName();</mark>但是getName的值已经被<mark>function () {<br>alert (1); };</mark>覆盖；所以答案为1。<br>4、由于在上一题中getName的内容已经被改变；所以得到的答案还是1。<br>5、这个题目涉及到了运算符的优先级问题，相当优先级的内容自行百度。这里“.”的优先级大于new;所以相当于<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">new (Foo.getName)()</span><br><span class="line">`` 这是一个构造函数，所以答案为2。</span><br><span class="line">6、这个题目相当于（new Foo()）.getName();此时的构造函数的返回值为this,终于在this的原型中找到了</span><br><span class="line">```bash</span><br><span class="line">	Foo.prototype.getName = <span class="function"><span class="title">function</span></span> () &#123; </span><br><span class="line">	alert (3);&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>所以答案为3。<br>7、根据优先级来算，相当于new ((new Foo()).getName) ();<br>先执行<mark>new Foo()</mark>,再执行<mark>.getName</mark>,最后才执行第一个new;<br>所以答案为3。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/23/函数的解析、执行/" data-id="ciojyn01600055epl1zmrq05x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/23/函数的解析、执行/" data-id="ciojzbssc000465pl6m1fpjtr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -157,7 +159,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="ciojyn00s00005eplwu0sgw3f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="ciojzbsrz000065plyp5qh948" class="article-share-link">Share</a>
       
       
     </footer>
@@ -193,7 +195,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪元素的应用/" data-id="ciojyn01000025eplx8mibywj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪元素的应用/" data-id="ciojzbss8000265plsjufaf78" class="article-share-link">Share</a>
       
       
     </footer>
@@ -235,7 +237,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="ciojyn01200035eplr7jles7f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="ciojzbssa000365plzrhai61h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -282,7 +284,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="ciojyn01500045epl4myvx0k4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="ciojzbssd000565plip9rinru" class="article-share-link">Share</a>
       
       
     </footer>
@@ -327,7 +329,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识npm/" data-id="ciojyn01a00075epl48w0z4c3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识npm/" data-id="ciojzbssj000765plwgkibmak" class="article-share-link">Share</a>
       
       
     </footer>
@@ -369,7 +371,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="ciojyn01900065eplqa0m72gm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="ciojzbssf000665pltyohm939" class="article-share-link">Share</a>
       
       
     </footer>
@@ -414,7 +416,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="ciojyn00x00015epl2ep28jsi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="ciojzbss5000165pl3v9phy1j" class="article-share-link">Share</a>
       
       
     </footer>
