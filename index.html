@@ -64,6 +64,43 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-函数的解析、执行" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/23/函数的解析、执行/" class="article-date">
+  <time datetime="2016-05-23T11:28:50.000Z" itemprop="datePublished">2016-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/23/函数的解析、执行/">函数的解析、执行</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##最近在学习函数的相关内容，整理了以下的经典例子<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">Foo</span></span>() &#123;</span><br><span class="line">    getName = <span class="function"><span class="title">function</span></span> () &#123; </span><br><span class="line">    	alert (1); &#125;;</span><br><span class="line">    <span class="built_in">return</span> this;</span><br><span class="line">	&#125;</span><br><span class="line">Foo.getName = <span class="function"><span class="title">function</span></span> () &#123; </span><br><span class="line">	alert (2);&#125;;</span><br><span class="line"></span><br><span class="line">Foo.prototype.getName = <span class="function"><span class="title">function</span></span> () &#123; </span><br><span class="line">	alert (3);&#125;;</span><br><span class="line">var getName = <span class="function"><span class="title">function</span></span> () &#123; </span><br><span class="line">	alert (4);&#125;;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">getName</span></span>() &#123; </span><br><span class="line">	alert (5);&#125;</span><br><span class="line"></span><br><span class="line">//请写出以下输出结果：</span><br><span class="line">Foo.getName();</span><br><span class="line">getName();</span><br><span class="line">Foo().getName();</span><br><span class="line">getName();</span><br><span class="line">new Foo.getName();</span><br><span class="line">new Foo().getName();</span><br><span class="line">new new Foo().getName();</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/23/函数的解析、执行/" data-id="ciojxnwoe00033cpl33dtnvex" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-gulp" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/05/16/gulp/" class="article-date">
@@ -115,7 +152,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="cio9sy2p50000x4plbhvw0ji2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/16/gulp/" data-id="ciojxnwoo00073cpl8mmncn22" class="article-share-link">Share</a>
       
       
     </footer>
@@ -151,7 +188,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪元素的应用/" data-id="cio9sy2ph0004x4pl25v98dsf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪元素的应用/" data-id="ciojxnwo800013cplpcv8pie7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -193,7 +230,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="cio9sy2pj0006x4pl8ttemju4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/12/伪类与伪元素/" data-id="ciojxnwoi00053cplvnxvvsyn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -240,7 +277,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="cio9sy2pb0001x4plcogv8b88" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识github/" data-id="ciojxnwoc00023cplurawrh7r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,7 +322,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识npm/" data-id="cio9sy2pg0003x4pl847ld95n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识npm/" data-id="ciojxnwoj00063cplwmgvdow6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -327,7 +364,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="cio9sy2pi0005x4plaaw7v3rm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/初识node-js/" data-id="ciojxnwog00043cpl0h9tcwuu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -372,7 +409,7 @@ gulp-less
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="cio9sy2pd0002x4plvk27xbjn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/11/hello-world/" data-id="ciojxnwo200003cplajlzaj7w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -412,6 +449,10 @@ gulp-less
       <ul>
         
           <li>
+            <a href="/2016/05/23/函数的解析、执行/">函数的解析、执行</a>
+          </li>
+        
+          <li>
             <a href="/2016/05/16/gulp/">团队配合之gulp</a>
           </li>
         
@@ -425,10 +466,6 @@ gulp-less
         
           <li>
             <a href="/2016/05/11/初识github/">初识github</a>
-          </li>
-        
-          <li>
-            <a href="/2016/05/11/初识npm/">初识npm</a>
           </li>
         
       </ul>
